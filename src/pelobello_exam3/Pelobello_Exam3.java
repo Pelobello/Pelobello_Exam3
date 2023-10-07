@@ -39,9 +39,13 @@ public class Pelobello_Exam3 {
                 }
                 node.next = temporary.next;
                 temporary.next = node;
-               print++;
+               
                
             }
+            if (print >4) {
+                list.deletion();
+            }
+            print++;
             
         }
       
@@ -51,7 +55,7 @@ public class Pelobello_Exam3 {
             }
             int temporaty = front.data;
             front = front.next;
-            
+            print--;
             return temporaty;
         }
         public void display()throws Exception{
@@ -89,11 +93,7 @@ public class Pelobello_Exam3 {
                     int priority = scan.nextInt();
                     list.insertion(enter, priority);
                      
-                    if (print >4) {
-                        list.deletion();
-                        print--;
-                    }
-                    
+
                     break;
                 case 2:
                      list.display();
